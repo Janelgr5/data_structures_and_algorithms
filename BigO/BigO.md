@@ -100,3 +100,42 @@
 1. Most primitives (booleans, numbers, undefined & null) are constant space - O(1)
 2. Strings require O(n) space (where n is the length of the string)
 3. Reference types are generally O(n), where n is the length of an array or the number of keys in an object.
+
+# Big O and the Object Data Type
+## Use when you...
+1. don't need order
+2. need fast access, insertion, and removal
+## The Big O of Objects
+1. insertion - O(1)
+2. removal - O(1)
+3. searching - O(n)
+4. accessing - O(1)
+  ### The Big O of Object Methods
+  1. Object.keys - O(n)
+  2. Object.values - O(n)
+  3. Object.entries - O(n)
+  4. Object.hasOwnProperty - O(1)
+
+# Big O and the Array Data Type
+## Use when you..
+1. need order
+2. need fast access, insertion, and removal (sort of...?)
+## The Big O of Arrays
+1. insertion - it depends...
+   1. where are we trying to insert?
+      1. at the end? O(1)
+      2. at the beginning? O(n)
+2. removal - it depends...
+   1. same as insertion
+3. searching - O(n)
+4. accessing - O(1)
+  ### The Big O of Array Methods
+  1. Array.push - O(1)
+  2. Array.pop - O(1)
+  3. Array.shift - O(n)
+  4. Array.unshift - O(n)
+  5. Array.concat - O(n) (debatable if it's O(m + n))
+  6. Array.slice - O(n)
+  7. Array.splice - O(n)
+  8. Array.sort - O(n * log n)
+  9. Array.forEach/map/filter/reduce/etc. - O(n)
