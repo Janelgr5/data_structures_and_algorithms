@@ -25,30 +25,34 @@
 1. The amount of memory (or space) required by an algorithm.
 2. Parallel concept to time complexity.
 
-# Drop the Constants:
+# The Rules of Big O
+
+## Drop the Constants (Contants don't matter)
 1. It is very possible for O(N) code to run faster than 0(1) code for specific inputs.
 2. Big O just describes the rate of increase.
-3. we drop the constants in runtime.
-  a. An algorithm that one might have described as 0(2N) is actually O(N).
+3. we drop the constants in runtime. Examples:
+  a. O(2n) => O(n)
+  b. O(500) => O(1)
+  c. O(13n^2) => O(n^2)
 
-# Drop the Non-Dominant Terms
+## Drop the Non-Dominant Terms (Smaller terms don't matter)
 1. You should drop the non-dominant terms.
-2. O(N^2 + N) becomes O(N^2).
-3. O(N + log N) becomes O(N).
-4. 0(5*2N + 1000^N100 ) becomes 0(2N ).
-5. We might still have a sum in a runtime. For example, the expression 0(B^2 + A) cannot be reduced (without some special knowledge of A and B).
+  a. O(n + 10) => O(n)
+  b. O(100n + 50) => O(n)
+  c. O(n^2 + 5n + 8) => O(n^2)
+2. We might still have a sum in a runtime. For example, the expression 0(B^2 + A) cannot be reduced (without some special knowledge of A and B).
 
-# Multi-Part Algorithms: Add vs. Multiply
+## Multi-Part Algorithms: Add vs. Multiply
 1. Suppose you have an algorithm that has two steps. When do you multiply the runtimes and when do you add them?
 2. If your algorithm is in the form "do this, then, when you're all done, do that" then you add the runtimes.
 3. If your algorithm is in the form "do this for each time you do that" then you multiply the runtimes.
 
-# Amortized Time
+## Amortized Time
 1. How do you describe the runtime of insertion?
 2. It allows us to describe that, yes, this worst case happens every once in a while. But once it happens, it won't happen again for so long that the cost is "amortized.'
 3. Instead of giving values for worst-case performance it provides an average performance
 4. The reason for considering amortized cost is that we will be interested in data structures that occasionally can incur a large cost as they perform some kind of rebalancing or improvement of their internal state, but where such operations cannot occur too frequently.
-a.  In this case, amortized analysis can give a much tighter bound on the true cost of using the data structure than a standard worst-case-per-operation bound.
+  a.  In this case, amortized analysis can give a much tighter bound on the true cost of using the data structure than a standard worst-case-per-operation bound.
 5. The aggregate method:
   a. Amortized time looks at an algorithm from the viewpoint of total running time rather than individual operations.
     i. We don’t care how long one insert takes, but rather the average time of all the calls to insert.
@@ -71,8 +75,14 @@ a.  In this case, amortized analysis can give a much tighter bound on the true c
   a. https://mortoray.com/2014/08/11/what-is-amortized-time/
   b. https://www.cs.cmu.edu/~avrim/451f11/lectures/lect0922.pdf
 
-# Log N Runtimes
+## Log N Runtimes
 1. When you see a problem where the number of elements in the problem space gets halved each time, that will likely be a 0(log N) runtime.
 
-# Recursive Runtimes
+## Recursive Runtimes
 1. When you have a recursive function that makes multiple calls, the runtime will often (but not always) look like O(branches^depth), where branches is the number of times each
+
+# Big O Tips
+1. Arithmetic operations are constant - O(1)
+2. Variable assignment is constant - O(1)
+3. Accessing elements in an array (by index) or object (by key) is contant - O(1)
+4. In a loop, the complexity is the length of the loop times the complexity of whatever happens inside of the loop - O(n), O(n^2), O(log n)
