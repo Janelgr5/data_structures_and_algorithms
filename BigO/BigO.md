@@ -77,7 +77,15 @@
   b. https://www.cs.cmu.edu/~avrim/451f11/lectures/lect0922.pdf
 
 ## Log N Runtimes
-1. When you see a problem where the number of elements in the problem space gets halved each time, that will likely be a 0(log N) runtime.
+1. the inverse of exponentiation
+2. The logarithm of a number roughly measures the number of times you can divide that number by 2 before you get a value that's less than or equal to one.
+3. When you see a problem where the number of elements in the problem space gets halved each time, that will likely be a O(log n) runtime.
+   1. $$ \log_2(8) = 3 ==> 2_3 = 8 $$
+   2. $$ \log_2(value) = exponent ==> 2^exponent = value $$
+4. When might we see logarithmic complexity (space/time):
+   1. sorting algos
+   2. searching algos
+   3. recursion
 
 ## Recursive Runtimes
 1. When you have a recursive function that makes multiple calls, the runtime will often (but not always) look like O(branches^depth), where branches is the number of times each
