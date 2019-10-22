@@ -1,8 +1,9 @@
 # Definition
 1. Big O time: the metric we use to describe the efficiency of algorithms.
-2. How the runtime of an algorithm grows as the inputs grow.
-3. When determining BigO, count the number of simple operations the computer has to perform!
-4. An algorithm is O(f(n)) if the number of simple operations the computer has to do  is eventually less than a constant times f(n), as n increases
+2. Time Complexity: How the runtime of an algorithm grows as the inputs grow.
+3. Space Complexity: How much additional memory do we need to allocate in order to run the code in our algorithm.
+4. When determining BigO, count the number of simple operations the computer has to perform!
+5. An algorithm is O(f(n)) if the number of simple operations the computer has to do  is eventually less than a constant times f(n), as n increases
    - f(n) could be linear (f(n) = n)
    - f(n) could be quadratic (f(n) = n^2)
    - f(n) could be constant (f(n) = 1)
@@ -22,7 +23,7 @@
   b. For many-probably most-algorithms, the worst case and the expected case are the same. Sometimes they're different, though, and we need to describe both of the runtimes.
 
 # Space Complexity:
-1. The amount of memory (or space) required by an algorithm.
+1. The amount of memory (or space) required by an algorithm, not including space taken up by the inputs (auxiliary space complexity).
 2. Parallel concept to time complexity.
 
 # The Rules of Big O
@@ -82,7 +83,12 @@
 1. When you have a recursive function that makes multiple calls, the runtime will often (but not always) look like O(branches^depth), where branches is the number of times each
 
 # Big O Tips
-1. Arithmetic operations are constant - O(1)
-2. Variable assignment is constant - O(1)
-3. Accessing elements in an array (by index) or object (by key) is contant - O(1)
-4. In a loop, the complexity is the length of the loop times the complexity of whatever happens inside of the loop - O(n), O(n^2), O(log n)
+## Time Complexity
+1. Arithmetic operations are constant time - O(1)
+2. Variable assignment is constant time - O(1)
+3. Accessing elements in an array (by index) or object (by key) is contant time - O(1)
+4. In a loop, the time complexity is the length of the loop times the complexity of whatever happens inside of the loop - O(n), O(n^2), O(log n)
+## Space Complexity
+1. Most primitives (booleans, numbers, undefined & null) are constant space - O(1)
+2. Strings require O(n) space (where n is the length of the string)
+3. Reference types are generally O(n), where n is the length of an array or the number of keys in an object.
