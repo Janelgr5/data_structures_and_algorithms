@@ -21,7 +21,7 @@ Resource: How to Solve It by George Polya
 4. Solve/Simplify
 5. Look back and refactor
 
-## Step 1: Understand the Problem
+## Step 1: Understand the Problem (R)
 
 1. Can I restate the problem in my own words?
 2. What are the inputs?
@@ -29,7 +29,7 @@ Resource: How to Solve It by George Polya
 4. Can the outputs be determined from the inputs? (do you have enough info to solve the problem?)
 5. How should I label the important pieces of data that are a part of the problem?
 
-## Step 2: Concrete Examples
+## Step 2: Concrete Examples (E)
 
 1.  help you understand the problem better
 2.  provide checks that your eventual solution works how it should.
@@ -39,4 +39,12 @@ Resource: How to Solve It by George Polya
     2.  complex examples
     3.  empty inputs
     4.  invalid inputs
-5.
+
+## Step 3: Break it Down (A)
+
+1. Explicitly write out the steps you need to take.
+   1. forces you to think about hte code you'll have to write before you write
+   2. helps you catch any lingering conceptual issues or misunderstandings before you dive in and have to worry about the details (ie. sytanx)
+2. Start with the skeleton of the function
+3. put //comments about the BASIC steps inside the function block
+   4.fill in the rest as you review your examples
