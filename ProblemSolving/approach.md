@@ -30,3 +30,13 @@ Resource: How to Solve It by George Polya
 5. How should I label the important pieces of data that are a part of the problem?
 
 ## Step 2: Concrete Examples
+
+1.  help you understand the problem better
+2.  provide checks that your eventual solution works how it should.
+3.  learn more information
+4.  Write examples with inputs and outputs:
+    1.  simple examples
+    2.  complex examples
+    3.  empty inputs
+    4.  invalid inputs
+5.
