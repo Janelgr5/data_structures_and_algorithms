@@ -1,6 +1,6 @@
 ### Problem Solving
 
-Resource: How to Solve It by George Polya
+**Resource**: How to Solve It by George Polya
 
 ## What is an Algorithm?
 
@@ -43,8 +43,24 @@ Resource: How to Solve It by George Polya
 ## Step 3: Break it Down (A)
 
 1. Explicitly write out the steps you need to take.
-   1. forces you to think about hte code you'll have to write before you write
+   1. forces you to think about the code you'll have to write before you write
    2. helps you catch any lingering conceptual issues or misunderstandings before you dive in and have to worry about the details (ie. sytanx)
 2. Start with the skeleton of the function
-3. put //comments about the BASIC steps inside the function block
+3. put _//comments_ about the BASIC steps inside the function block
    4.fill in the rest as you review your examples
+
+## Step 4: Solve/Simplify (C)
+
+# Solve
+
+1. solve the problem if you can.
+2. if you cannot solve the problem solve a simpler problem.
+   1. If stuck, start writing code to do the stuff you know how to do
+   2. Will gain insight into the harder part of the problem.
+
+# Simplify
+
+1. Find the cored difficulty in what you're trying to do.
+2. Temporarily ignore that difficulty
+3. Write a simplified soltion
+4. Incorporate that difficulty back
