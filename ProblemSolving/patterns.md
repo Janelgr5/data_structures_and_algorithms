@@ -1,4 +1,4 @@
-### Problem Solving Patterns
+# Problem Solving Patterns
 
 ## Frequency Counter
 
@@ -7,7 +7,7 @@
 2. This can often avoid the need for nested loops or O(n^2) operations with arrays/strings.
 3. Use anytime you have multiple pieces of data and you need to compare them.
 
-# Example: Anagrams
+### Example: Anagrams
 
 Given two strings, write a function to determine if the second string is an anagram of the first. An anagram is a word, phrase, or name forme by rearranging the letters to another, such as _cinema_, formed from _iceman_.
 
@@ -42,7 +42,7 @@ function validAnagram(firstStr, secondStr){
 2. Usually a linear structure, and searching for a pair of values or something that meets a condition.
 3. Decide which pointer to move based on the condition that determines which to move.
 
-# Example: countUniqueValues
+### Example: countUniqueValues
 
 Implement a function called countUniqueValues, which accepts a sorted array, and counts the unique values in the array. There can be negative numbers in the array, but it will always be sorted.
 
