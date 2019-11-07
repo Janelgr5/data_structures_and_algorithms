@@ -5,6 +5,7 @@
 1. Uses objects or sets to collect values/frequencies of values in some linear structure like an array or string.
    1. Can compare that object to another object
 2. This can often avoid the need for nested loops or O(n^2) operations with arrays/strings.
+3. Use anytime you have multiple pieces of data and you need to compare them.
 
 # Example: Anagrams
 
