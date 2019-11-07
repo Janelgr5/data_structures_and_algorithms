@@ -35,3 +35,40 @@ function validAnagram(firstStr, secondStr){
   return true;
 }
 ```
+
+## Multiple Pointers
+
+1. creating pointers or values that correspond to an index or position and move towards the beginning, end or middle based on a certain condition.
+2. Usually a linear structure, and searching for a pair of values or something that meets a condition.
+3. Decide which pointer to move based on the condition that determines which to move.
+
+# Example: countUniqueValues
+
+Implement a function called countUniqueValues, which accepts a sorted array, and counts the unique values in the array. There can be negative numbers in the array, but it will always be sorted.
+
+```
+function countUniqueValues(arrayOfNums){
+  let uniqueValCount = 0;
+
+  //Start the uniqueValPointer at index 0
+  let uniqueValPointer = 0;
+
+  //Start the sameValPointer at index 1
+  let sameValPointer = 1;
+
+  //while there is length
+  while(sameValPointer <= arrayOfNums.length){
+
+    //if the value at both pointers are the same, then just move the sameValPointer to the next index.
+    if(arrayOfNums[uniqueValPointer] === arrayOfNums[sameValPointer]){
+      sameValPointer++
+    } else {
+      //if the value at both pointers are different, add 1 to the uniqueValCount, Move the uniqueValPointer to the index of the SameValPointer, Move the sameValPointer up one index.
+      uniqueValCount++
+      uniqueValPointer = sameValPointer;
+      sameValPointer = uniqueValPointer + 1;
+    }
+  }
+  return uniqueValCount;
+}
+```
