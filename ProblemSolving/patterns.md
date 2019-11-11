@@ -84,5 +84,5 @@ function countUniqueValues(arrayOfNums){
 ## Divide And Conquer
 
 1. quick and merge sort
-2. divides a data set into smaller chunks and then repeating a process witha subset of data.
+2. divides a data set into smaller chunks and then repeating a process with a subset of data.
 3. tremendously decreases time complexity
