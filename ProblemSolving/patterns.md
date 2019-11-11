@@ -56,7 +56,7 @@ function countUniqueValues(arrayOfNums){
   //Start the sameValPointer at index 1
   let sameValPointer = 1;
 
-  //while there is length
+  //while the sameValPointer's index is less than the array's length
   while(sameValPointer <= arrayOfNums.length){
 
     //if the value at both pointers are the same, then just move the sameValPointer to the next index.
@@ -72,3 +72,15 @@ function countUniqueValues(arrayOfNums){
   return uniqueValCount;
 }
 ```
+
+## The Sliding Window
+
+1. Creating a window which can either be an array or number from one position to another
+   1. Usually move it from left to right
+2. Depending on a certain condition, the window either increases or closes ( and a new window is created).
+3. Very useful for keeping track of a subset of data in an array/string (larger set of data), etc.
+
+Divide And Conquer
+1. quick and merge sort
+2. divides a data set into smaller chunks and then repeating a process witha subset of data.
+3. tremendously decreases time complexity
