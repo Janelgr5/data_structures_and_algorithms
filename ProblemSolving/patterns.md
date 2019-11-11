@@ -79,8 +79,10 @@ function countUniqueValues(arrayOfNums){
    1. Usually move it from left to right
 2. Depending on a certain condition, the window either increases or closes ( and a new window is created).
 3. Very useful for keeping track of a subset of data in an array/string (larger set of data), etc.
+4. Define a range to keep track of, and slide it across
 
-Divide And Conquer
+## Divide And Conquer
+
 1. quick and merge sort
 2. divides a data set into smaller chunks and then repeating a process witha subset of data.
 3. tremendously decreases time complexity
