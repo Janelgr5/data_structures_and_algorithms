@@ -1,4 +1,4 @@
-// Write a function called sameFrequency.Given two positive integers, find out if the two numbers hae the same frequency of digits.
+// Write a function called sameFrequency.  Given two positive integers, find out if the two numbers hae the same frequency of digits.
 
 function sameFrequency(num1, num2) {
   // turn numbers into strings
@@ -40,3 +40,22 @@ console.log(sameFrequency(182, 281)); // true
 console.log(sameFrequency(34, 14)); // false
 console.log(sameFrequency(3589578, 5879385)); // true
 console.log(sameFrequency(22, 222)); // false
+
+// Implement a function called, areThereDuplicates which accepts a variable number of arguments, and checks whether there are any duplicates among the arguments passed in.
+
+function areThereDuplicates() {
+  let countObj = {};
+
+  for (let element of arguments) {
+    if (countObj[element]) {
+      return true;
+    } else {
+      countObj[element] = 1;
+    }
+  }
+  return false;
+}
+
+console.log(areThereDuplicates(1, 2, 3)); // false
+console.log(areThereDuplicates(1, 2, 2)); // true
+console.log(areThereDuplicates('a', 'b', 'c', 'a')); // true
