@@ -77,3 +77,85 @@ minSubArrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 39); // 3
 minSubArrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 55); // 5
 minSubArrayLen([4, 3, 3, 8, 1, 2, 3], 11); // 2
 minSubArrayLen()
+
+// findLongestSubString
+// Write a function called findLongestSubString, which accepts a string and returns the length of the longest substring with all distinct characters.
+
+function findLongestSubstring(str) {
+  // DO NOT NEED
+  // keep track of length of current subString
+  // let tempLength = 0;
+
+  // YES keep track of longest subString
+  let longest = 0;
+
+  // YES start of sliding window
+  let start = 0;
+
+  // DO NOT NEED
+  // end of sliding window
+  // let end = 0;
+
+  // object to keep track of which unique character was seen and when
+  let seen = {};
+
+  // DO NOT NEED
+  // handle edge case where array has less than 2 elements
+  // if (str.length < 2) return str.length;
+
+  //SHOULD USE FOR LOOP INSTEAD OF WHILE LOOP
+  // while (end < str.length) {
+  //   // increase window when the end val isn't the same as the next val and add 1 to longest
+  //   if (!seen[str[end]]) {
+  //     seen[str[end]] = 1;
+  //     end++;
+  //     tempLength++;
+  //   }
+  //   // slide window when the end val is the same as the next val, and reset longest to 1
+  //   else if (seen[str[end]]) {
+  //     if (longest < tempLength) {
+  //       longest = tempLength;
+  //     }
+  //     tempLength = 0;
+  //     start = end;
+  //     seen = {};
+  //   }
+  // }
+
+  for (let i = 0; i < str.length; i++) {
+    // store the current char in a variable
+    let char = str[i];
+    // we only hit this check when we have a repeat char
+    if (seen[char]) {
+      // if it is in the seen, set start to the largest value (either the current start value or the value stored at seen[char])
+      start = Math.max(start, seen[char]);
+    }
+    // if the current index minus the start of the substring plus one (to keep the current count) is larger than the current value of longest then change the value to i - start + 1
+    longest = Math.max(longest, i - start + 1);
+    // add one to the current key
+    seen[char] = i + 1;
+  }
+  return longest;
+}
+
+findLongestSubstring(''); // 0
+findLongestSubstring('rithmschool'); // 7
+findLongestSubstring('thisisawesome'); // 6
+findLongestSubstring('thecatinthehat'); // 7
+findLongestSubstring('bbbbbb'); // 1
+findLongestSubstring('longestsubstring'); // 8
+findLongestSubstring('abdefg'); // 7
+
+/* seen object looks like this when done:
+{
+  r: 1,
+  i: 2,
+  t: 3,
+  h: 4,
+  m: 5,
+  s: 6,
+  c: 7,
+  o: 9, // no 8 because saw h again before getting to this char;
+  l: 11 // no 10 because saw o again before getting to this char;
+}
+*/
