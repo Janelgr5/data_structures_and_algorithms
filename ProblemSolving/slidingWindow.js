@@ -3,8 +3,16 @@
 // Given an array of integers and a Number, write a function called maxSubarraySum, which finds the maximum sum of a subarray with the length of the number passed to the function.
 
 // Note that a subarray must consist of consecutive elements from the original Array.  In the first example below, [100, 200, 300] is a subarray of the original array but [100, 300] isn't.
-function maxSubarraySum(arr, num) {
 
+function maxSubarraySum(arr, num) {
+  let maxSum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    let end = i + (num);
+
+  }
+
+  return maxSum;
 }
 
 maxSubarraySum([100, 200, 300, 400], 2); // 700
