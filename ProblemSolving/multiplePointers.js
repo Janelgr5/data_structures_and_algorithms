@@ -52,3 +52,40 @@ console.log(averagePair([1, 2, 3], 2.5)); // true
 console.log(averagePair([1, 3, 3, 5, 6, 7, 10, 12, 19], 8)); // true
 console.log(averagePair([-1, 0, 3, 4, 5, 6], 4.1)); // false
 console.log(averagePair([], 4)); // false
+
+// Write a function called isSubsequence which takes in two strings and checks whether the characters in the first string form a subsequence of the characters in the second string.  In other words, the function should check whether the characters in the first string appears somewhere in the second string, without their order changing.
+
+/* PARKING LOT!!!
+function isSubsequence(subStr, str) {
+  let subStrPointer, strPointer = 0;
+
+  //optimize for substrings and strings that are exactly the same
+  if (subStr === str) {
+    return true;
+  }
+  if (!subStr) return true;
+
+  while (strPointer < str.length) {
+
+    // if the element in the subString is equal to the element in the string...
+    if (subStr[subStrPointer] === str[strPointer]) {
+      // check if the subStr's pointer is equal to the it's length then return true.
+      if (subStrPointer === subStr.length) {
+        return true;
+      } else {
+        // otherwise move the subStrPointer by  index
+        subStrPointer++;
+      }
+    }
+    //move the str's pointer to the next index
+    strPointer++;
+  }
+
+  return false;
+}
+
+console.log(isSubsequence('hello', 'hello world')); // true
+console.log(isSubsequence('sing', 'sting')); // true
+console.log(isSubsequence('abc', 'abracadabra')); // true
+console.log(isSubsequence('abc', 'acb')); // false (order matters)
+*/
