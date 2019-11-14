@@ -120,6 +120,7 @@ function maxSubarraySum(arr, num) {
 
   return maxSum;
 }
+
 maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 2); // 10
 maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 4); // 17
 maxSubarraySum([], 4) // null
