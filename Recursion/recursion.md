@@ -19,7 +19,9 @@ A process (a function) that calls itself.
 3. A stack data structure
 4. Any time a function is invoked it is placed (`pushed`) on the top of the call stack.
 5. When JavaScript sees the return keyword or when the function ends, the compiler will remove (`pop`) the function from the top of the call stack.
+6. **The Call Stack and Recursion**: When we write recursive functions, we keep pushing new (the same) functions onto the call stack.
 
-### The Call Stack and Recursion
+## How Recursive Functions Work
 
-When we write recursive functions, we keep pushing new (the same) functions onto the call stack.
+1. **Recursive Case**: Invoke the same function with a _different input_ until you reach your base case.
+2. **Base Case**: The condition when the recursion ends.
