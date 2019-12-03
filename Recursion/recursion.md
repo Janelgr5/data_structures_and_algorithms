@@ -1,3 +1,25 @@
 # RECURSION
 
-##
+## What is recursion?
+
+A process (a function) that calls itself.
+
+## Why recursion?
+
+1. To convert JSON to JavaScript
+2. DOM traversal
+3. Object traversal
+4. complex data structures
+5. cleaner alternative to iteration
+
+## The Call Stack
+
+1. In almost all program languages, there is a built in data structure that manages what happens when functions are invoked.
+2. In JavaScript, that data structure is called the **Call Stack**.
+3. A stack data structure
+4. Any time a function is invoked it is placed (`pushed`) on the top of the call stack.
+5. When JavaScript sees the return keyword or when the function ends, the compiler will remove (`pop`) the function from the top of the call stack.
+
+### The Call Stack and Recursion
+
+When we write recursive functions, we keep pushing new (the same) functions onto the call stack.
