@@ -78,4 +78,36 @@ function factorial(num) {
 1. No base case --> stack overflow
 2. Forgetting to return or returning the wrong thing --> stack overflow
    1. need to return to pop the function off the call stack
-3. Stack overflow
+
+## Helper Method Recursion
+
+Helpful when processing an array or some collection
+
+### Syntax
+
+```js
+function mainFunc(input) {
+  let outerScopedVariable = [];
+  function helperRecursionFunc(helperInput) {
+    // modify the outerScopedVariable
+    helperRecursionFunc(helperInput--);
+  }
+  helperRecursionFunc(input);
+  return outerScopedVariable;
+}
+```
+
+### Example:
+
+```js
+function collectOddValues(arr) {
+  let oddVals = [];
+  function helperRecursionFunc(helperInput) {
+    if (helperInput.length === 0) return;
+    if (helperInput[0] % 2 !== 0) oddVals.push(helperInput[0]);
+    helperRecursionFunc(helperInput.slice(1));
+  }
+  helperRecursionFunc(arr);
+  return oddVals;
+}
+```
