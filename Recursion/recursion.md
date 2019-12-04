@@ -72,3 +72,10 @@ function factorial(num) {
   return num * factorial(num - 1);
 }
 ```
+
+## Pitfalls
+
+1. No base case --> stack overflow
+2. Forgetting to return or returning the wrong thing --> stack overflow
+   1. need to return to pop the function off the call stack
+3. Stack overflow
