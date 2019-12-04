@@ -25,3 +25,43 @@ A process (a function) that calls itself.
 
 1. **Recursive Case**: Invoke the same function with a _different input_ until you reach your base case.
 2. **Base Case**: The condition when the recursion ends.
+
+## Examples
+
+### Countdown
+
+```js
+function countDown(num) {
+  if (num === 0) {
+    console.log('Countdown complete');
+  } else {
+    console.log(num);
+    countDown(num - 1);
+  }
+}
+```
+
+### SumRange
+
+```js
+function sumRange(num) {
+  if (num === 1) return 1;
+  return num + sumRange(num - 1);
+}
+```
+
+### Factorial
+
+#### Iteratively
+
+```js
+function factorial(num) {
+  let total = 1;
+  for (let i = num; i > 1; i--) {
+    total *= i;
+  }
+  return total;
+}
+```
+
+#### Recursively
