@@ -100,9 +100,13 @@ function mainFunc(input) {
 ### Example:
 
 ```js
+// outer function not recursive
 function collectOddValues(arr) {
+  // define in outer scope.
   let oddVals = [];
+  // inner function recurses
   function helperRecursionFunc(helperInput) {
+    // update/modify in inner scope
     if (helperInput.length === 0) return;
     if (helperInput[0] % 2 !== 0) oddVals.push(helperInput[0]);
     helperRecursionFunc(helperInput.slice(1));
@@ -111,3 +115,25 @@ function collectOddValues(arr) {
   return oddVals;
 }
 ```
+
+## Pure Recursion
+
+The recursion is part of the function.
+
+### Example
+
+```js
+function collectOddValues(arr) {
+  let newArr = [];
+  if (arr.length === 0) return newArr;
+  if (arr[0] % 2 !== 0) newArr.push(arr[0]);
+  newArr = newArr.concat(collectOddValues(arr.slice(1)));
+  return newArr;
+}
+```
+
+### Tips
+
+1. **Arrays**: use methods like `slice`, **the spread operator** `...array`, and `concat` that make copies of arrays so you don't mutate them.
+2. **Strings**: use methods like `slice`, `substr`, or `substring` to make copies of strings, because they are immutable.
+3. **Objects**: to make copies use `Object.assign` or **the spread operator**.
